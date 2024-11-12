@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bap Er Bank</title>
+
+    <!-- DaisyUI v4.12.14 & TailwindCss -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <main>
+        <!-- Login Page start -->
+        <section id="loginPage">
+
+        <!-- Header section start -->
+        <div class="mt-[70px]">
+            <h1 class="text-3xl font-bold text-center">Walcome to <span class="text-[#EE5810]">Bap Er Bank</span>!!!</h1>
+        </div>
+        <!-- Header section end -->
+
+        <!-- Login section start -->
+        <div class="bg-[#FFECD5] w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] mx-auto p-7 rounded-lg mt-6">
+        <div class="">
+
+         <h3 class="text-[#E45A1B] text-xl font-medium my-3">Please Login</h3>
+
+         <input type="text" id="mail" class="block py-2 px-4 w-[100%] mb-4 rounded-md bg-[#E7F1FF]" placeholder="Tyep your Gmail...">
+         <input type="text" id="password" class="block py-2 px-4 w-[100%] mb-3 rounded-md" placeholder="Tyep your Password...">
+         <div id="wrong">
+
+         </div>
+         <button onclick="pageLogin()" class="bg-[#F77316] text-white text-lg font-normal py-2 px-6 rounded-xl">Login</button>
+        </div>
+
+        </div>
+        <!-- Login section end -->
+
+        </section>
+        <!-- Login Page end -->
+
+
+        <!-- Bank Accunt section start -->
+         <section id="accuntPage" class="hidden">
+            <h1 class="text-[#E75C1D] text-4xl font-semibold text-center mt-10">Bank</h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[90%]  lg:w-[70%] mx-auto my-7 text-white">
+               <div class="bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-lg p-5">
+                <h4>Deposit</h4>
+                <h6 class="text-4xl font-semibold">$<span id="depositBalance">00</span></h6>
+               </div>
+               <div class="bg-gradient-to-r from-red-600 to-red-400 rounded-lg p-5">
+                <h4>Withdraw</h4>
+                <h6 class="text-4xl font-semibold">$<span id="withdrawShow">00</span></h6>
+               </div>
+               <div class="bg-gradient-to-r from-orange-400 to-orange-300 rounded-lg p-5">
+                <h4>Balance</h4>
+                <h6 class="text-4xl font-semibold">$<span id="totalBalance">1450</span></h6>
+               </div>
+            </div>
+
+            <div class="w-[90%] lg:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 text-white">
+                <div class="bg-gradient-to-r from-violet-500 to-violet-400 rounded-lg p-5">
+                    <h4 class="text-lg font-normal mb-2">Pleasc Deposit</h4>
+                    <input type="number" id="depositField" class="block text-[#000] py-2 px-4 w-[100%] mb-4 rounded-md" placeholder="$ Amount you want to deposit...">
+                    <button onclick="depositBalance()" class="bg-[#E85B0B] text-white text-lg font-normal py-2 px-6 rounded-xl">Deposit</button>
+                </div> 
+
+                <div class="bg-gradient-to-r from-teal-500 to-teal-400 rounded-lg p-5">
+                    <h4 class="text-lg font-normal mb-2">Pleasc Withdraw</h4>
+                    <input type="number" id="withdraw" class="block py-2 px-4 w-[100%] text-[#000] mb-4 rounded-md" placeholder="$ Amount you want to Withdraw...">
+
+                    <div id="withdrawWrong">
+
+                    </div>
+                    <button onclick="withdraw()" class="bg-[#E85B0B] text-white text-lg font-normal py-2 px-6 rounded-xl">Withdraw</button>
+                </div> 
+            </div>
+         </section>
+        <!-- Bank Accunt section end -->
+    </main>
+     
+    <script src="./index.js"></script>
+</body>
+</html>
